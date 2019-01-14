@@ -10,16 +10,25 @@
  */
 
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
-import messages from './messages';
+// import { FormattedMessage } from 'react-intl';
+// import messages from './messages';
+import Logo from './styled/Logo';
+import Splash from './styled/Splash';
+import Button from './styled/Button';
 
 /* eslint-disable react/prefer-stateless-function */
 export default class HomePage extends React.PureComponent {
   render() {
     return (
-      <h1>
-        <FormattedMessage {...messages.header} />
-      </h1>
+      <div className="background">
+        <div className="gradient"> </div>
+        <div className="landing">
+          <Button className="button">About</Button>
+          <Button className="button">Contact</Button>
+          <Splash />
+          <Logo>Gebo</Logo>
+        </div>
+      </div>
     );
   }
 }
